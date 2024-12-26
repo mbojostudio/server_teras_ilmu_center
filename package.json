@@ -1,9 +1,8 @@
 {
   "name": "back-and",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "build": "npm run build",
     "start": "node server.js"
   },
   "keywords": [],
@@ -20,7 +19,9 @@
     "express": "^4.21.2",
     "express-session": "^1.18.1",
     "firebase-admin": "^13.0.2",
+    "glob": "^11.0.0",
     "multer": "^1.4.5-lts.1",
-    "redis": "^4.7.0"
+    "redis": "^4.7.0",
+    "rimraf": "^6.0.1"
   }
 }
