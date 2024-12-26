@@ -1,11 +1,10 @@
 {
-    "version": 2,
-    "build": [
-        {
-            "src": "./server.js",
-            "use": "@vercel/mode"
-        }
-    ],
+    "version": 3,
+    "build": {
+      "env": {},
+      "src": "./server.js",
+      "use": "@vercel/node"
+    },
     "routes": [
       {
         "src": "/(.*)",
