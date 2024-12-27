@@ -407,6 +407,4 @@ app.post('/addComment', async (req, res) => {
 
 
 // Jalankan server
-app.listen(PORT, () => {
-  console.log(`Server berjalan di http://localhost:${PORT}`);
-});
+module.exports = app;
