@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "vercel dev",
-    "start": "vercel dev"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
@@ -24,9 +24,5 @@
     "multer": "^1.4.5-lts.1",
     "redis": "^4.7.0",
     "rimraf": "^6.0.1"
-  },
-  "devDependencies": {},
-  "engines": {
-    "node": "16.x"
   }
 }

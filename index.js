@@ -378,33 +378,9 @@ app.post('/like', async (req, res) => {
 });
 
 
-// Endpoint untuk menambahkan komentar
-app.post('/addComment', async (req, res) => {
-  const { postId, userId, username, profilePicture, text } = req.body;
-
-  if (!postId || !userId || !username || !profilePicture || !text) {
-    return res.status(400).json({ message: 'Data tidak lengkap.' });
-  }
-
-  try {
-    const commentData = {
-      userId,
-      username,
-      profilePicture,
-      text,
-      timestamp: Date.now()
-    };
-
-    const commentRef = db.ref(`posts/${postId}/comments`).push();
-    await commentRef.set(commentData);
-
-    res.status(200).json({ message: 'Komentar berhasil ditambahkan.' });
-  } catch (error) {
-    console.error('Error adding comment:', error);
-    res.status(500).json({ message: 'Gagal menambahkan komentar.' });
-  }
-});
-
 
 // Jalankan server
-module.exports = app;
+app.listen(PORT, () => {
+    console.log(`Server berjalan di http://localhost:${PORT}`);
+  });
+  
