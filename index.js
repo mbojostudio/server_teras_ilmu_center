@@ -74,7 +74,7 @@ app.post("/signup", async (req, res) => {
   }
 
   try {
-    const usersRef = db.ref("users");
+    const usersRef = db.ref("admin");
 
     // Cek jika email sudah terdaftar
     const snapshot = await usersRef.orderByChild("email").equalTo(email).once("value");
